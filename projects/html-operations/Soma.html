@@ -19,17 +19,20 @@
                 <br>
                 <input id="numB" type="text" placeholder="Insira um número">
                 <br>
-                <input id="resultado" type="text">
-                <button onclick="calculaSoma()">Calcular</button>
+                <input id="resultado" type="text" value='' readonly>
+                <button type="button" onclick="calculaSoma()">Calcular</button>
             </fieldset>
         </form>
     </main>
 
     <script>
         function calculaSoma() {
+            var soma = 0
             var numeroA = parseFloat(document.getElementById('numA').value)
             var numeroB = parseFloat(document.getElementById('numB').value)
-            document.getElementById("resultado").value = numeroA + numeroB
+            soma = numeroA + numeroB
+            document.getElementById("resultado").value = soma
+            window.stop
         }        
     </script>
     

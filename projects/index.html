@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações em Html</title>
+</head>
+<body>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Soma</legend>
+                <label for="numA">Número A</label>
+                <br>
+                <input id="numA" type="text" placeholder="Insira um número">
+                <br>
+                <label for="numB">Numéro B</label>
+                <br>
+                <input id="numB" type="text" placeholder="Insira um número">
+                <br>
+                <input id="resultado" type="text">
+                <button onclick="calculaSoma()">Calcular</button>
+            </fieldset>
+        </form>
+    </main>
+
+    <script>
+        function calculaSoma() {
+            var numeroA = parseFloat(document.getElementById('numA').value)
+            var numeroB = parseFloat(document.getElementById('numB').value)
+            document.getElementById("resultado").value = numeroA + numeroB
+        }        
+    </script>
+    
+</body>
+</html>

@@ -19,7 +19,8 @@ const users = [
 function calculaSaldo(receitas, despesas) {
     var lucro = somaReceitas(receitas)
     var gasto = somaDespesas(despesas)
-    var saldo = lucro + gasto
+
+    var saldo = lucro - gasto
 
     return saldo
 
@@ -37,8 +38,8 @@ function somaReceitas(receitas) {
 function somaDespesas(despesas) {
     var gasto = 0
 
-    for(let j = 0; j < despesas.length; i++){
-        gasto = gasto + despesas[i]
+    for(let j = 0; j < despesas.length; j++){
+        gasto = gasto + despesas[j]
     }
     return gasto
 }
@@ -48,6 +49,7 @@ for(i = 0; i <users.length; i++){
     var despesas = users[i].despesas
 
     const financa = calculaSaldo(receitas, despesas)
+    
     if (financa > 0) {
         console.log(`${users[i].nome} possui saldo POSITIVO de ${financa}`)
     } else if (financa < 0) {

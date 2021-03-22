@@ -1,31 +1,22 @@
 const user = [
-    {
-    nome: "Banzak", 
-    tech : ["Cgfg", "CSS"]
-    },
-    {
-    nome: "Mayk", 
-    tech : ["CSS", "Html"]
-    },
-    {
-    nome: "Rodrigo", 
-    tech : ["React", "Node"]
-    }
+    {nome: "Banzak", tech: ['Cgfg', 'CSS']},
+    {nome: "Mayk", tech: ["CSS", "Html"]    },
+    {nome: "Rodrigo", tech: ["React", "Node"]}
 ]
 
 function checkTechCSS(user){
-    for(let i = 0; i < user['tech'].length; i++){
-        if (user.tech[i] == "CSS") {
+    const tecnologia = user.tech
+    for(let i = 0; i < tecnologia.length; i++){
+        if (tecnologia[i] == 'CSS') {
             return true
-        } else {
-            return false
         }
     }
+    return false
 }
 
 
 
-for(let i= 0; i < user.tech.length; i++){
+for(let i= 0; i < user.length; i++){
     const usuerWorkWithCSS = checkTechCSS(user[i])
 
     if(usuerWorkWithCSS) {

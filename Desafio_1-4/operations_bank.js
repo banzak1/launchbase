@@ -45,14 +45,30 @@ function getAverageTransactionValue() {
     return console.log(averageTransactionValue)
 }
 
-createTransaction({ type: 'credit', value: 50 })
-createTransaction({ type: 'credit', value: 120 })
-createTransaction({ type: 'debit', value: 80 })
-createTransaction({ type: 'debit', value: 30 })
+function getTransactionsCount() {
+    let count = { credit: 0, debit: 0 }
+    let transaction = user.transactions
 
-console.log(user.balance)
+    for (let transaction of user.transactions) {
+        if (transaction.type === 'credit') {
+            count.credit++
+        } else {
+            count.debit++
+        }
+    }
+    return console.log(count)
+}
+
+createTransaction({ type: 'credit', value: 50.5 })
+createTransaction({ type: 'credit', value: 120.8 })
+createTransaction({ type: 'debit', value: 80.3 })
+createTransaction({ type: 'debit', value: 30.2 })
+
+console.log(user.balance.toFixed(2))
 
 showHigherTransaction('credit')
 showHigherTransaction('debit')
 
 getAverageTransactionValue()
+
+getTransactionsCount()

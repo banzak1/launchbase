@@ -4,6 +4,7 @@
     --primary-color-background: #4B4B4B;
     --primary-color-background-darker: #2e2e2efd;
     --hover-color-green: #50fa7b;
+    --font-color-white: #f8f8f8;
 }
 
 * {
@@ -14,7 +15,7 @@
 
 body {
     background: var(--primary-color-background);
-    color: rgb(0, 0, 0);
+    color: var(--font-color-white);
 }
 
 header {
@@ -40,4 +41,14 @@ header div a {
 header div a:hover {
     color: #50fa7b;
     transition: color 0.5s;
+}
+
+#wapper {
+    text-align: center;
+    padding: 2rem;
+}
+
+#wapper img {
+    border-radius: 50%;
+    border: 5px solid var(--hover-color-green)
 }

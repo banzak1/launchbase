@@ -1,9 +1,10 @@
 :root {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     --primary-color-background: #4B4B4B;
     --primary-color-background-darker: #2e2e2efd;
-    --hover-color-green: #50fa7b;
+    /*--hover-color-green: #50fa7b;*/
+    --color-ligth-yellow: #faef50;
     --font-color-white: #ffffff;
 }
 
@@ -24,22 +25,22 @@ header {
     background: var(--primary-color-background-darker);
 }
 
-header div{ 
+.links{ 
     text-align: center;
 
 }
 
-header div a {
+.links a {
     color: white;
     font-size: 1.1rem;
     line-height: 1.6rem;
     text-decoration: none;
-
+    padding-bottom: .3rem;
     margin: 0 1rem;
 }
 
-header div a:hover {
-    color: #50fa7b;
+.links a:hover {
+    color: var(--color-ligth-yellow);
     transition: color 0.5s;
 }
 
@@ -50,7 +51,9 @@ header div a:hover {
 
 #wrapper img {
     border-radius: 50%;
-    border: 5px solid var(--hover-color-green)
+    border: 5px solid var(--color-ligth-yellow);
+    margin-bottom: 2rem;
+    height: 200px;
 }
 
 #wrapper h1 {
@@ -75,5 +78,10 @@ header div a:hover {
 }
 
 #wrapper p a {
-    color: var(--hover-color-green);
+    color: var(--color-ligth-yellow);
+}
+
+#links-footer a {
+    border-bottom: 1px solid var(--color-ligth-yellow);
+    text-decoration: none;
 }

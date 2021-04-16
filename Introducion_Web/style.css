@@ -1,10 +1,10 @@
 :root {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    --primary-color-background: #4B4B4B;
-    --primary-color-background-darker: #2e2e2efd;
+    --primary-color-background: #5c636e;
+    --primary-color-background-darker: #393e46;
     /*--hover-color-green: #50fa7b;*/
-    --color-ligth-yellow: #faef50;
+    --color-ligth-yellow: #ffd700;
     --font-color-white: #ffffff;
 }
 
@@ -32,7 +32,7 @@ header {
 
 .links a {
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     line-height: 1.6rem;
     text-decoration: none;
     padding-bottom: .3rem;
@@ -41,7 +41,7 @@ header {
 
 .links a:hover {
     color: var(--color-ligth-yellow);
-    transition: color 0.5s;
+    transition: color 0.2s;
 }
 
 #wrapper {

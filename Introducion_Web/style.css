@@ -9,6 +9,10 @@
     --font-color-white: #ffffff;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -90,8 +94,12 @@ header {
 /*=== Cards ===*/
 
 .cards {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .card {
@@ -103,5 +111,28 @@ header {
 }
 
 .card_content, .card_info {
-    padding: 1.5rem;
+    padding: .5rem;
 }
+
+.card_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card_state {
+    background-color: var(--color-ligth-yellow-ligther);
+    filter: brightness(90%);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* === MODAL === */
+
+/*.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+}*/
